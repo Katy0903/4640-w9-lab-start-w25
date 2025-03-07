@@ -16,7 +16,8 @@ See lab instructions on D2L
 ```
 cd packer
 packer init .
-packer build ansible-web.pkr.hcl
+packer build .
+
 ```
 
 2. Deploy with Terraform:

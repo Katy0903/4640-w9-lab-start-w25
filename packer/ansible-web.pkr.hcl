@@ -42,10 +42,8 @@ build {
   sources = ["source.amazon-ebs.ubuntu"]
 
   provisioner "ansible" {
-    playbook_file = "ansible/playbook.yml"
-    user          = var.ssh_username
-  	ansible_env_vars = ["ANSIBLE_HOST_KEY_CHECKING=False", "ANSIBLE_NOCOWS=1"]
-	  extra_arguments  = ["--extra-vars", "-vvv"]
-
+    playbook_file = "../ansible/playbook.yml"
+    user          = "ubuntu"
+    ansible_env_vars = ["ANSIBLE_HOST_KEY_CHECKING=False"]
   }
 }
